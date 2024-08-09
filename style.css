@@ -3,3 +3,17 @@ body {
 .hdr {
     margin-left: 40%;
 }
+.container {
+    display: block;
+    width: 400px;
+    margin: 10px auto;
+}
+#submitbtn {
+    width: 90px;
+    margin-left: 60px;
+}
+/* .form {
+    display: block;
+    width: 300px;
+    margin: 10 auto;
+} */
