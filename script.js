@@ -19,4 +19,9 @@ function processData(data){
     console.log(data.days)
 }
 
-
+function handleSubmit(event){
+    event.preventDefault();
+    let location_cont = document.getElementById('location')
+    let location = location_cont.value;
+    fetchData(location)
+}
