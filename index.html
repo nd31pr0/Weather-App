@@ -9,19 +9,70 @@
 <body>
     <h1 class="hdr">Weather App!</h1>
     <div class="container">
-        <form class="form" onsubmit="return handleSubmit(event)">
-            <div class="lable_cont">
-                <label id="locationLabel" for="location">City name:</label>
-                <input type="text" id="location" name="location" placeholder="Enter a location" required><br><br>
+        <div class="formCont">
+            <form class="form" onsubmit="return handleSubmit(event)">
+                <div class="lable_cont">
+                    <label id="locationLabel" for="location">City name:</label>
+                    <input type="text" id="location" name="location" placeholder="Enter a location" required><br><br>
+                </div>
+                <button id="submitbtn" type="submit">submit</button>
+            </form>
+            <div id="progressCont">
+                <progress id="progressBar" value="0" max="100" style="display:none;"></progress>
             </div>
-            <button id="submitbtn" type="submit">submit</button>
-        </form>
-        <div id="progressCont">
-            <progress id="progressBar" value="0" max="100" style="display:none;"></progress>
         </div>
 
-        <div id="fetched"></div>
+        <div id="fetched">
+            <table>
+                <thead>
+                    <tr>
+                        <th id="hdr">Parameter</th>
+                        <th id="hdr">Value</th>
+                    </tr>
+                </thead>
+                <tbody id="weatherTableBody">
+                    <tr>
+                        <td>=> Location</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>=> Temperature</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>=> Humidity</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>=> Wind Speed</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>=> Condition</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>=> Precipitation</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>=> Visibility</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>=> Sunrise</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>=> Sunset</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
