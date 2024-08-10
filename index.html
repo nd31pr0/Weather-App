@@ -12,10 +12,13 @@
         <form class="form" onsubmit="return handleSubmit(event)">
             <div class="lable_cont">
                 <label for="location">City name:</label>
-                <input type="text" id="location" name="location" placeholder="Enter a location"><br><br>
+                <input type="text" id="location" name="location" placeholder="Enter a location" required><br><br>
             </div>
             <button id="submitbtn" type="submit">submit</button>
         </form>
+        <div id="progressCont">
+            <progress id="progressBar" value="0" max="100" style="display:none;"></progress>
+        </div>
 
         <div id="fetched"></div>
     </div>

@@ -1,7 +1,11 @@
 body {
+    background-image: url(https://cdn.pixabay.com/animation/2023/03/05/12/05/12-05-54-62_512.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .hdr {
     margin-left: 40%;
+    margin-top: 300px;
 }
 .container {
     display: block;
@@ -15,4 +19,11 @@ body {
 #fetched {
     margin-top: 30px;
     margin-left: 60px;
+}
+#progressCont {
+    margin-top: 20px;
+    width: 80%;
+}
+#progressBar {
+    width: 80%;
 }

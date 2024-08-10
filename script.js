@@ -1,9 +1,33 @@
 
 async function fetchData(city){
     let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?key=Y42383TB7X23CAJJWBPFX6DWE`;
+    const progressBar = document.getElementById('progressBar');
+    
+    // Show the progress bar
+    progressBar.style.display = 'block';
+    progressBar.value = 0; // Reset progress
+
     try {
+        // Simulate progress
+        const simulateProgress = () => {
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += 10;
+                if (progress <= 100) {
+                    progressBar.value = progress;
+                } else {
+                    clearInterval(interval);
+                }
+            }, 100); // Update every 100ms
+        };
+
+        simulateProgress();
         let response = await fetch(url, { mode: 'cors' });
+        clearInterval(simulateProgress);
+        progressBar.style.display = 'none';
+
         if (!response.ok) {
+            progressBar.style.display = 'none';
             throw new Error('Network response was not ok');
         }
         let data = await response.json();
