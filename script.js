@@ -8,7 +8,8 @@ async function fetchData(city){
         }
         let data = await response.json();
         //console.log(data); // Return the fetched data
-        processData(data);
+        let processedData = processData(data);
+        displayFetchedData(processedData)
     } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
     }
@@ -16,7 +17,8 @@ async function fetchData(city){
 
 
 function processData(data){
-    console.log(data.days)
+    console.log(data.days[0].stations)
+    return (data.days[0].stations)
 }
 
 function handleSubmit(event){
@@ -25,4 +27,19 @@ function handleSubmit(event){
     let location = location_cont.value;
     fetchData(location)
     location_cont.value = ''
+}
+
+function displayFetchedData(data){
+    let dispContainer = document.getElementById('fetched')
+    dispContainer.innerHTML = '';
+    data.map((item)=>{
+        // Create a new list item
+        let listItem = document.createElement('li');
+        
+        // Assuming each item has a 'name' property (adjust as necessary)
+        listItem.textContent = item; // Set the text content
+
+        // Append the list item to the container
+        dispContainer.appendChild(listItem);
+    })
 }
