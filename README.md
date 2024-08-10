@@ -2,7 +2,9 @@
 Weather App
 
 ## Description
-The application aims to make use of async await and promises to  handle asynchronous data fetching from an API.
+- The application aims to make use of async await and promises to  handle asynchronous data fetching from an API.
+- While the data is being fetched, a progress bar shows the percentage completed.
+- We fetch the data from a publicly available api.
 
 
 ## Project Instructions:

@@ -12,6 +12,13 @@ body {
     width: 400px;
     margin: 10px auto;
 }
+#locationLabel {
+    font-weight: bold;
+}
+#location {
+    border: 3px solid rgb(85, 83, 87);
+    border-radius: 5px;
+}
 #submitbtn {
     width: 90px;
     margin-left: 60px;
