@@ -17,3 +17,8 @@ Weather App
 - Add any styling you like!
 - * Optional: add a ‘loading’ component that displays from the time the form is submitted until the information comes back from the API. Use DevTools to test for low-end devices.
 _ * Push that baby to github and share your solution below!
+
+
+## Testing the API
+- Into the input field, enter the name of a location such as "london"
+- Hit "Submit" to see the returned data
