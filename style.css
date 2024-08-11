@@ -73,9 +73,15 @@ table, th, td {
     border:1px solid black;
   }
 td {
-    padding-left: 220px;
+    /* padding-left: 20%; */
     background-color: azure;
     color: black;
+}
+.td_left {
+    padding-left: 20%;
+}
+.td_right {
+    padding-left: 5%;
 }
 th {
     font-weight: bold;

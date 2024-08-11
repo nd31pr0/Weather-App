@@ -42,6 +42,7 @@ async function fetchData(city){
 
 function processData(data){
     console.log(data.days[0].stations)
+    console.log(data.days[0].conditions)
     
     let tableContent = document.getElementById('fetched')
     tableContent.style.display = 'block';
@@ -57,8 +58,8 @@ function processData(data){
     let feels = document.getElementById('feels')
     feels.innerHTML = data.days[7].feelslike
 
-    let condition = document.getElementById('conditions')
-    condition.innerHTML = data.days[31].conditions
+    let condition = document.getElementById('condition')
+    condition.innerHTML = data.days[0].conditions
 
     let precipitation = document.getElementById('precipitation')
     precipitation.innerHTML = data.days[10].precip
@@ -67,7 +68,7 @@ function processData(data){
     days.innerHTML = data.days.data
 
     let sunrise = document.getElementById('sunrise')
-    sunrise.innerHTML = data.sunrise
+    sunrise.innerHTML = data.days.preciptype.sunrise
 
     let sunset = document.getElementById('sunset')
     sunset.innerHTML = data.sunset
