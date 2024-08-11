@@ -6,7 +6,7 @@ body {
 }
 .hdr {
     margin-left: 40%;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 .label_cont {
     display: block;
@@ -43,12 +43,13 @@ body {
 }
 #fetched {
     margin-top: 30px;
+    display: none;
     margin-left: 60px;
     color: white;
     width: 70%;
     background-color: rgb(179, 102, 113);
     background-image: linear-gradient(to bottom, rgb(85, 83, 87) , blue);
-    opacity: 0.4;
+    opacity: 0.8;
     height: 500px;
     border-radius: 6px;
     border: 5px solid rgba(85, 83, 87);

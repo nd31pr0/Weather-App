@@ -42,6 +42,35 @@ async function fetchData(city){
 
 function processData(data){
     console.log(data.days[0].stations)
+    let tableContent = document.getElementById('fetched')
+    tableContent.style.display = 'block';
+    let city = document.getElementById('city')
+    city.innerHTML = data.address
+
+    let temperature = document.getElementById('temperature')
+    temperature.innerHTML = data.days.temperature
+
+    let humidity = document.getElementById('humidity')
+    humidity.innerHTML = data.days.humidity
+
+    let feels = document.getElementById('feel')
+    feels.innerHTML = data.days.feelslike
+
+    let condition = document.getElementById('condition')
+    condition.innerHTML = data.days.conditions
+
+    let precipitation = document.getElementById('precipitation')
+    precipitation.innerHTML = data.days.precip
+
+    let days = document.getElementById('days')
+    days.innerHTML = data.days.data
+
+    let sunrise = document.getElementById('sunrise')
+    sunrise.innerHTML = data.sunrise
+
+    let sunset = document.getElementById('sunset')
+    sunset.innerHTML = data.sunset
+
     return (data.days[0].stations)
 }
 
