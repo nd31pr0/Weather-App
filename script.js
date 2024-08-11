@@ -50,13 +50,13 @@ function processData(data){
     city.innerHTML = data.address
 
     let temperature = document.getElementById('temperature')
-    temperature.innerHTML = data.days[4].temp
+    temperature.innerHTML = data.days[0].temp
 
     let humidity = document.getElementById('humidity')
-    humidity.innerHTML = data.days[9].humidity
+    humidity.innerHTML = data.days[0].humidity
 
     let feels = document.getElementById('feels')
-    feels.innerHTML = data.days[7].feelslike
+    feels.innerHTML = data.days[0].feelslike
 
     let condition = document.getElementById('condition')
     condition.innerHTML = data.days[0].conditions
@@ -64,11 +64,11 @@ function processData(data){
     let precipitation = document.getElementById('precipitation')
     precipitation.innerHTML = data.days[10].precip
 
-    let days = document.getElementById('days')
-    days.innerHTML = data.days.data
+    let days = document.getElementById('date')
+    days.innerHTML = data.days[0].datetime
 
     let sunrise = document.getElementById('sunrise')
-    sunrise.innerHTML = data.days.preciptype.sunrise
+    sunrise.innerHTML = data.days[26].sunrise
 
     let sunset = document.getElementById('sunset')
     sunset.innerHTML = data.sunset
