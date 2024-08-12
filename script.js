@@ -33,7 +33,7 @@ async function fetchData(city){
         let data = await response.json();
         //console.log(data); // Return the fetched data
         let processedData = processData(data);
-        displayFetchedData(processedData)
+        //displayFetchedData(processedData)
     } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
     }
@@ -41,13 +41,13 @@ async function fetchData(city){
 
 
 function processData(data){
-    console.log(data.days[0].stations)
-    console.log(data.days[0].conditions)
+    console.log(data.days[0].sunset)
+    console.log(data.days[0].sunrise)
     
     let tableContent = document.getElementById('fetched')
     tableContent.style.display = 'block';
     let city = document.getElementById('city')
-    city.innerHTML = data.address
+    city.innerHTML = data.resolvedAddress
 
     let temperature = document.getElementById('temperature')
     temperature.innerHTML = data.days[0].temp
@@ -62,18 +62,18 @@ function processData(data){
     condition.innerHTML = data.days[0].conditions
 
     let precipitation = document.getElementById('precipitation')
-    precipitation.innerHTML = data.days[10].precip
+    precipitation.innerHTML = data.days[0].precip
 
     let days = document.getElementById('date')
     days.innerHTML = data.days[0].datetime
 
     let sunrise = document.getElementById('sunrise')
-    sunrise.innerHTML = data.days[26].sunrise
+    sunrise.innerHTML = data.days[0].icon
 
     let sunset = document.getElementById('sunset')
-    sunset.innerHTML = data.sunset
+    sunset.innerHTML = data.days[0].pressure
 
-    return (data.days[0].stations)
+   // return (data.days[0].stations)
 }
 
 function handleSubmit(event){
